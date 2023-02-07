@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int n = in.nextInt();
+        HashMap<String , Integer> m = new HashMap();
+        in.nextLine();
+        for(int i=0;i<n;i++){
+            String str = in.nextLine();
+            int num = in.nextInt();
+            m.put(str,num);
+            in.nextLine();
+        }
+        while(in.hasNext()){
+            String k = in.nextLine();
+            Integer num = m.get(k);
+            if(num != null){
+                System.out.println(k+"="+num);
+            }
+            else{
+                System.out.println("Not found");
+            }
+        }
+    }
+}
